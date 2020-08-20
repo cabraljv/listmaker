@@ -1,0 +1,12 @@
+{
+  "name": "listmaker",
+  "version": "1.0.0",
+  "description": "Aplicação que a partir de uma lista de perguntas formula um arquivo pdf com todas as respostas",
+  "repository": "https://github.com/cabraljv/listmaker.git",
+  "author": "cabraljv <joaovictorcabral.dev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "graphql": "^15.3.0",
+    "graphql-request": "^3.0.0"
+  }
+}
