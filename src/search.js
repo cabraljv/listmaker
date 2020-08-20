@@ -61,20 +61,21 @@ class Search{
         after: null,
       }
       const data = await graphQLClient.request(query, variables);
-      this.getBestAwnser(data.questionSearch.edges[0].node.answers.nodes);
+      return this.getBestAwnser(data.questionSearch.edges[0].node.answers.nodes);
     }
     getBestAwnser(awnsers){
       var bestAwnser;
-      awnsers.forEach(awnser=>{
-        const awnserContent = awnser.content.replace(/<[^>]*>?/gm, '')
+      for(let i=0;i<awnsers.length;i++){
+        const awnserContent = awnsers[i].content.replace(/<[^>]*>?/gm, '')
         if(!bestAwnser){
-          bestAwnser=awnser;
+          awnsers[i].content = awnserContent;
+          bestAwnser=awnsers[i];
         }else{
-          if(awnser.thanksCount>bestAwnser.thanksCount){
-            bestAwnser=awnser;
+          if(awnsers[i].thanksCount>bestAwnser.thanksCount){
+            bestAwnser=awnsers[i];
           }
         }
-      })
+      }
       if(!bestAwnser){
         return {content: 'Resposta não encontrada', thanksCount: 0}
       }
