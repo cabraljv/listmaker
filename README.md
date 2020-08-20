@@ -1,5 +1,5 @@
 # ListMaker
-Esse programa a partir de um arquivo com perguntas(de vestibular ou algo do tipo) busca no site brainly pela melhor resposta e as salva a lista de exercicios+respostas em formato pdf
+Esse programa a partir de um arquivo com perguntas do feltre busca no site brainly pela melhor resposta e as salva em uma lista de exercicios+respostas em formato pdf
 
 ## Requisitos
 - NodeJS 12.x
@@ -12,13 +12,23 @@ Clone o repositório na sua máquina
 Instale os pacotes
 `$ npm install`
 
-Insira as perguntas no arquivo questions.txt. As pesguntas conter apenas uma linha e devem estar no formato:
+Insira o número da página + o número das questões no arquivo questions.txt. As pesguntas devem estar no formato:
 
-```número- pergunta```
+```
+Pagina {numero da pagina}
+{questao1},{questao2}
+
+```
 
 Exemplo:
 
-```1- Quem descobriu o brasil?```
+```
+Pagina 88
+22,24,25
+
+```
+### Atenção
+A aplicação atualmente funciona somente com questões do feltre 2
 
 Para rodar o programa basta rodar o comando
 
