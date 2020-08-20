@@ -1,14 +1,16 @@
 const Search = require('./search');
 const FileQuestion = require('./fileQuestion');
 const SaveFile = require('./saveFile')
+const SavePDF = require('./savePDF')
 
 async function runApp(){
   const questions = FileQuestion.readFile('questions.txt');
-  await questions.forEach(async question=>{
-    const bestAwnser = await Search.searchQuestion(question.question);
-    SaveFile.save(question,bestAwnser);
-
-  })
+  var toSave='';
+  for (let i=0;i<questions.length;i++){
+    const bestAwnser = await Search.searchQuestion(questions[i].question);
+    toSave+=SaveFile.formatAwnser(questions[i],bestAwnser);
+  }
+  SavePDF(toSave);
 }
 runApp();
 
