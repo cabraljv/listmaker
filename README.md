@@ -1,54 +1,33 @@
+# ListMaker
+Esse programa a partir de um arquivo com perguntas(de vestibular ou algo do tipo) busca no site brainly pela melhor resposta e as salva a lista de exercicios+respostas em formato pdf
 
-  
-# Graphql API
+# Requisitos
+- NodeJS 12.x
+
+## Como utilizar
+
+Clone o repositório na sua máquina
+`$ git clone https://github.com/cabraljv/listmaker`
+
+Instale os pacotes
+`$ npm install`
+
+Insira as perguntas no arquivo questions.txt. As pesguntas conter apenas uma linha e devem estar no formato:
+
+`número- pergunta`
+
+Exemplo:
+`1- Quem descobriu o brasil?`
+
+Na versão alpha as respostas são geradas no arquivo respostas.txt
+
+
+## Graphql API
 >Graphql API na lingua portuguesa https://brainly.com.br/graphql/pt
 
-Query utilizada
-```graphql
-query SearchQuery($query: String!, $first: Int!, $after: ID) {
-  questionSearch(query: $query, first: $first, after: $after) {
-    count
-    edges {
-      node {
-        id
-        databaseId
-        author {
-          id
-          databaseId
-          isDeleted
-          nick
-          avatar {
-            thumbnailUrl
-            __typename
-          }
-          rank {
-            name
-            __typename
-          }
-          __typename
-        }
-        content
-        answers {
-          nodes {
-            thanksCount
-            ratesCount
-            rating
-            __typename
-            content
-          }
-          hasVerified
-          __typename
-        }
-        __typename
-      }
-      highlight {
-        contentFragments
-        __typename
-      }
-      __typename
-    }
-    __typename
-  }
-}
+## Contribuidores
+- João Victor Cabral
+
+Feito com 💜
 
 ```
