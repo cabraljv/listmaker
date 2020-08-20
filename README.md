@@ -14,12 +14,19 @@ Instale os pacotes
 
 Insira as perguntas no arquivo questions.txt. As pesguntas conter apenas uma linha e devem estar no formato:
 
-`número- pergunta`
+```número- pergunta```
 
 Exemplo:
-`1- Quem descobriu o brasil?`
 
-Na versão alpha as respostas são geradas no arquivo respostas.txt
+```1- Quem descobriu o brasil?```
+
+Para rodar o programa basta rodar o comando
+
+```sh
+$ npm run start
+```
+
+Após isso vai ser gerado um arquivo pdf com todas as melhores respostas encontradas
 
 
 ## Graphql API
