@@ -9,11 +9,11 @@ const fonts = {
   },
 }
 var printer = new pdfmake(fonts);
+
+//Gera arquivo pdf com um determinado texto dentro
 function gerarPdf(texto){
   var docDefinition = {
-    content: [
-      texto
-    ]
+    content: [texto]
   };
   
   var now = new Date();
