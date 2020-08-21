@@ -46,5 +46,3 @@ Após isso vai ser gerado um arquivo pdf com todas as melhores respostas encontr
 - João Victor Cabral
 
 Feito com 💜
-
-```
