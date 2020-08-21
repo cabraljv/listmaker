@@ -1,6 +1,6 @@
+<img src="./docs/listmaker.png" width=130> 
 # ListMaker
 
-<img src="./docs/listmaker.png">
 
 ![version](https://img.shields.io/badge/version-0.2-green) ![license](https://img.shields.io/badge/license-mit-blue) ![contrubuitors](https://img.shields.io/badge/contribuitors-1-red) 
 
